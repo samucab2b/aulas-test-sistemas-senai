@@ -5,7 +5,3 @@ body {
 .hidden {
   display: none;
 }
-
-div.card-footer p {
-  color: var(--bs-card-cap-bg);
-}

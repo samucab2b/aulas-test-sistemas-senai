@@ -1,5 +1,5 @@
 function calcIdade(data){
-	return moment("2021-04-13").diff(
+	return moment().diff(
       moment(data),
       "years",
       false
