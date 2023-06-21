@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+div.card-footer p {
+  color: var(--bs-card-cap-bg);
+}
