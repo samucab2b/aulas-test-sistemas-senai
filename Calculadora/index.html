@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+	<link href="./src/styles.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	<script src="./src/calculadora.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container mt-2">
+      <div class="card">
+        <div class="card-header">
+          <h1>Sistema de Soma!</h1>
+        </div>
+        <div class="card-body">
+			<div class="row">
+			  <div class="form-group col-6">
+				<label for="numb1">Número 1:</label>
+				<input class="form-control" type="number" id="numb1" />
+			  </div>
+			  <div class="form-group col-6">
+				<label for="numb2">Número 2:</label>
+				<input class="form-control" type="number" id="numb2" />
+			  </div>
+			</div>
+			<div class="form-group col-12 mt-2">
+				<button type="button" onclick="calcular()" class="btn btn-success">
+					Calcular
+				</button>
+			</div>
+        </div>
+        <div class="card-footer hidden">
+          <p id="result">Resultado:</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function calcular() {
+    let numb2 = document.getElementById("numb2");
+	let numb1 = document.getElementById("numb1");
+
+    result.parentElement.classList.remove("hidden");
+
+    let resultado = somar(numb2.value, numb1.value);
+
+    result.innerText = resultado;
+  }
+</script>
