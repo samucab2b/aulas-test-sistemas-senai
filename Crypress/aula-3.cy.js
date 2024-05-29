@@ -1,4 +1,15 @@
 describe('Aula Cypress - Validações', () => {
+
+
+  it('passes', () => {
+    cy.visit('https://diteix.github.io/lil-square-of-eight/');
+    cy.get('body').click(200, 160).pause();
+    cy.get('body').click(260, 220);
+
+    //60
+  })
+  
+  
   it('GreaterThan e First', {defaultCommandTimeout: 5000}, () => {
     cy.visit('https://react-shopping-cart-67954.firebaseapp.com/')
     cy.get(':nth-child(3) > label > .checkmark').click()
