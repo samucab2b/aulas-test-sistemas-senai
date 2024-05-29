@@ -3,6 +3,17 @@ describe('Aula Cypress - Validações', () => {
 
   it('passes', () => {
     cy.visit('https://diteix.github.io/lil-square-of-eight/');
+
+    cy.get('[src="images/settings.png"]').click().pause();
+
+    cy.get('#playerOneName').clear();
+    cy.get('#playerOneName').type("Lado Janela");
+
+    cy.get('#playerTwoName').clear();
+    cy.get("#playerTwoName").type("Lado parede");
+  
+    cy.get('#restartButton').click();
+
     cy.get('body').click(200, 160).pause();
     cy.get('body').click(260, 220);
 
