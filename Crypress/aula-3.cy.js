@@ -2,7 +2,7 @@ describe('Aula Cypress - Validações', () => {
 
 
   it('passes', () => {
-    cy.visit('https://diteix.github.io/lil-square-of-eight/');
+  cy.visit('https://diteix.github.io/lil-square-of-eight/');
 
     cy.get('[src="images/settings.png"]').click().pause();
 
@@ -15,8 +15,26 @@ describe('Aula Cypress - Validações', () => {
     cy.get('#restartButton').click();
 
     cy.get('body').click(200, 160).pause();
+
+    cy.get('[x=6][y=0]').should("have.css", 'fill', "rgb(0, 0, 255)");
+
     cy.get('body').click(260, 220);
 
+    cy.get('[x=65][y=59]').should("have.css", 'fill', "rgb(255, 0, 0)");
+
+    cy.get('body').click(200, 220);
+
+    cy.get('body').click(260, 160);
+
+    cy.get('body').click(190, 180);
+
+    cy.get('body').click(320, 160);
+
+    cy.get('body').click(250, 180);
+
+    cy.get('[x=9][y=9]').should("have.css", 'fill', "rgb(0, 0, 255)");
+
+    // | -
     //60
   })
   
